@@ -29,6 +29,14 @@ def ExcelRefresh (filename):
         # Save and Close
         Workbook.Save()
         Application.Quit()
+
+        # For debugging purposes
+        MB_OK = 0x0
+        MB_OKCXL = 0x01
+        result = ctypes.windll.user32.MessageBoxA(0, '***************\nFile Refreshed: ' + filename + '\n***************\n\nContinue Excel-Refresh script??', 'Running ExcelRefresh.py', MB_OK | MB_OKCXL)
+        if result == win32con.IDCANCEL:
+            quit()
+            
         return;
     else:
         quit();
