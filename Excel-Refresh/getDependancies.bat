@@ -1,4 +1,4 @@
-cd "C:/Python27"
+cd "C:/Python27/Scripts"
 cls
 start pip install ctypes
 start pip install os
