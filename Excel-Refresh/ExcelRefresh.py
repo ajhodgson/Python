@@ -18,7 +18,7 @@ def ExcelRefresh (filename):
         Application.Visible = 0
         # Open Your Workbook
         try:
-            Workbook = Application.Workbooks.Open(SourcePathName)
+            Workbook = Application.Workbooks.Open(SourcePathName+file)
         except com_error as reason:
             print reason
             quit()
