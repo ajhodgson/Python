@@ -8,9 +8,9 @@ import os
 from pathlib import Path
 from pythoncom import com_error
 
-def ExcelRefresh (filename):
+def ExcelRefresh (filename, path):
     file = filename
-    SourcePathName = '<complete file to path the folder>' #Use / instead of \
+    SourcePathName = (path + '/')
     if os.path.exists(SourcePathName+file):
         # Open Excel
         Application = win32com.client.Dispatch("Excel.Application")

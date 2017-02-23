@@ -7,7 +7,7 @@ os.chdir(path)
 
 i = 0
 for file in glob.glob("*.xlsx"):
-        ExcelRefresh(file)
+        ExcelRefresh(file, path)
         i= i+1
 quit();
 
